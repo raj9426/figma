@@ -5,6 +5,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    background-color: #000;
+}
 nav{
     display: flex;
     justify-content: center;
@@ -56,7 +59,7 @@ nav li a{
         }
 }
 @media screen and (max-width:768px) {
-    body{
+    *{
         overflow-x: hidden;
     }
     nav ul{
@@ -68,8 +71,9 @@ nav li a{
         flex-direction: column;
         align-items: center;
         background-color: #000;
-        transform: translateX(100%);
+        transform: translateY(-200%);
         transition: transform 0.5s ease-in;
+        /* display: none; */
 
     }
     .nav-links li{
@@ -79,10 +83,18 @@ nav li a{
         display: block;
         cursor: pointer;
     }
+    #download{
+        background: #ffffff;
+        padding: 5px 25px;
+        color: #000;
+        border-radius: 500px;
+    }
 }
 
 .nav-active{
-    transform: translateX(0%);
+    /* display: flex; */
+    transform: translateY(0%);
+    
 }
 
 @keyframes navLinkFade {
